@@ -45,7 +45,7 @@ resource "null_resource" "backend" {
 resource "aws_ec2_instance_state" "backend" {
   instance_id = module.backend.id
   state       = "stopped"
-  # stop the serever only when null resource provisioning is completed
+  # stop the server only when null resource provisioning is completed
   depends_on = [null_resource.backend]
 }
 
