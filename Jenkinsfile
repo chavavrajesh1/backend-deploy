@@ -12,6 +12,8 @@ pipeline {
     }
     environment{
         def appVersion = '' //variable declaration
+        nexusUrl = 'nexus.chavavenkat.online:8081'
+
     }
     stages {
         stage('print the version'){
